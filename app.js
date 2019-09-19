@@ -21,11 +21,13 @@ mongoose.connect(process.env.DB_CONNECTION_STRING,
 //importing Routes
 const homeRoute = require('./routes/home')
 const authRoute = require('./routes/auth')
+const postRoute = require('./routes/posts')
 
 
 //Using Routes
 app.use('/api', homeRoute)
 app.use('/api/user', authRoute)
+app.use('/api/posts', postRoute)
 
 
 
